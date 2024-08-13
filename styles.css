@@ -17,40 +17,90 @@ body {
     align-items: center;
     padding: 20px;
     background-color: white;
-    border-radius: 50% / 30%;
+    border-radius: 50% / 30%; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     height: 100px; /* Adjust height as needed */
     margin: 0 auto; /* Center the header */
     max-width: 1300px; /* Adjust max-width as needed */
 }
 
-.logo img {
-    width: 75px;
-    height: 75px;
-    margin-left: 20px;
-}
 .school-name {
     font-size: 30px; /* Adjust size as needed */
     color: #ffb900; /* Adjust color as needed */
     font-weight: bold;
-    
 }
+
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    position: relative;
 }
 
 .navbar a {
-    color: #4b2d83; /* Change color for better visibility on white */
+    color: #4b2d83;
     text-decoration: none;
+    padding: 10px 15px;
+    display: block;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
     color: #ffb900;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 9999; 
+    top: 100%; 
+    left: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); 
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+}
+
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #4B0082;
 }
 
 .btn-admission {
@@ -65,6 +115,11 @@ body {
 .btn-admission:hover {
     background-color: #e0a800;
 }
+
+ 
+
+
+
 
 /* .header {
     display: flex;
@@ -115,6 +170,7 @@ body {
     padding: 60px 20px;
     background-color: #622f8e;
     color: white;
+    margin-top: 20px;
 }
 
 .hero-content {
@@ -568,8 +624,10 @@ body {
 
 .testimonial-carousel {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
     gap: 20px;
     padding: 20px 0;
 }
@@ -579,8 +637,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 300px;
+    height: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
+    scroll-snap-align:start;
     flex-shrink: 0;
     text-align: left;
 }
@@ -743,6 +802,3 @@ body {
     color: #ccc;
     font-size: 0.9em;
 }
-
-
-
